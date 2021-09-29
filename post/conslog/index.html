@@ -1,0 +1,244 @@
+<!doctype html><html lang=en itemscope itemtype=http://schema.org/WebPage>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Conslog - hrmn.dev</title>
+<meta name=description content="A VS Code extension for a better console.log() experience">
+<meta name=author content="Marc Hermann"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"hrmn.dev","url":"https:\/\/www.hrmn.dev"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/www.hrmn.dev"}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/www.hrmn.dev","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/www.hrmn.dev\/post\/conslog\/","name":"Conslog"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Marc Hermann"},"headline":"Conslog","description":"Conslog is a great time saver for JavaScript learner, making it super easy to add or remove console.logs to and from selected code.\n","inLanguage":"en","wordCount":259,"datePublished":"2021-07-04T00:00:00","dateModified":"2021-07-04T00:00:00","image":"https:\/\/www.hrmn.dev\/img\/pixel-marc-512x512.png","keywords":["projects, vscode, regular expressions"],"mainEntityOfPage":"https:\/\/www.hrmn.dev\/post\/conslog\/","publisher":{"@type":"Organization","name":"https:\/\/www.hrmn.dev","logo":{"@type":"ImageObject","url":"https:\/\/www.hrmn.dev\/img\/pixel-marc-512x512.png","height":60,"width":60}}}</script>
+<meta property="og:title" content="Conslog">
+<meta property="og:description" content="A VS Code extension for a better console.log() experience">
+<meta property="og:image" content="https://www.hrmn.dev/img/conslogLogSelection.gif">
+<meta property="og:url" content="https://www.hrmn.dev/post/conslog/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="hrmn.dev">
+<meta name=twitter:title content="Conslog">
+<meta name=twitter:description content="A VS Code extension for a better console.log() experience">
+<meta name=twitter:image content="https://www.hrmn.dev/img/conslogLogSelection.gif">
+<meta name=twitter:card content="summary">
+<meta name=twitter:site content="@mrchrmn">
+<meta name=twitter:creator content="@mrchrmn">
+<link href=https://www.hrmn.dev/favicon.ico rel=icon type=image/x-icon>
+<meta name=generator content="Hugo 0.88.1">
+<link rel=alternate href=https://www.hrmn.dev/index.xml type=application/rss+xml title=hrmn.dev><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css integrity=sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y crossorigin=anonymous>
+<link rel=stylesheet href=https://use.fontawesome.com/releases/v5.5.0/css/all.css integrity=sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU crossorigin=anonymous>
+<link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous><link rel=stylesheet href=https://www.hrmn.dev/css/main.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"><link rel=stylesheet href=https://www.hrmn.dev/css/syntax.css><link rel=stylesheet href=https://www.hrmn.dev/css/codeblock.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css integrity=sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css integrity=sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R crossorigin=anonymous>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+<div class=container-fluid>
+<div class=navbar-header>
+<button type=button class=navbar-toggle data-toggle=collapse data-target=#main-navbar>
+<span class=sr-only>Toggle navigation</span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+</button>
+<a class=navbar-brand href=https://www.hrmn.dev>hrmn.dev</a>
+</div>
+<div class="collapse navbar-collapse" id=main-navbar>
+<ul class="nav navbar-nav navbar-right">
+<li class=navlinks-container>
+<a class=navlinks-parent>Projects</a>
+<div class=navlinks-children>
+<a href=/post/thrsqr/>ThrSqr</a>
+<a href=/post/conslog/>Conslog</a>
+<a href=/post/microscopic-space/>Microscopic Space</a>
+<a href=/post/berlin-defendr/>Berlin Defendr</a>
+</div>
+</li>
+</ul>
+</div>
+<div class=avatar-container>
+<div class=avatar-img-border>
+<a title=hrmn.dev href=https://www.hrmn.dev>
+<img class=avatar-img src=https://www.hrmn.dev/img/pixel-marc-512x512.png alt=hrmn.dev>
+</a>
+</div>
+</div>
+</div>
+</nav>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div>
+<header class=header-section>
+<div class="intro-header no-img">
+<div class=container>
+<div class=row>
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<div class=post-heading>
+<h1>Conslog</h1>
+<h2 class=post-subheading>A VS Code extension for a better console.log() experience</h2>
+<span class=post-meta>
+<i class="fab fa-github"></i>&nbsp;<a href=https://github.com/mrchrmn/conslog>Repository</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<i class="fas fa-globe"></i>&nbsp;<a href="https://marketplace.visualstudio.com/items?itemName=mrchrmn.conslog">Marketplace</a>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class=container role=main>
+<div class=row>
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<article role=main class=blog-post>
+<p><em>Conslog is a great time saver for JavaScript learner, making it super easy to add or remove <code>console.log</code>s to and from selected code.</em></p>
+<p>The idea behind it was to make it easier to log the test cases that are sometimes provided with coding problems, eg. on Codewars or Leetcode, for example like this:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>mySolution(testCase); <span style=color:#09f;font-style:italic>// =&gt; true
+</span><span style=color:#09f;font-style:italic></span>mySolution(<span style=color:#c30>&#34;testCase&#34;</span>); <span style=color:#09f;font-style:italic>// =&gt; &#34;Casetest&#34;
+</span></code></pre></div><p>For a full description visit the <a href="https://marketplace.visualstudio.com/items?itemName=mrchrmn.conslog">Visual Studio Marketplace</a> or the project&rsquo;s <a href=https://github.com/mrchrmn/conslog>Github page</a>.</p>
+<p>After getting to grips with how VS Code snippets and extensions work, the project was basically an exercise in regular expressions. Check out a few of the key features below to find out what regular expression is at work.</p>
+<h3 id=log-selection>Log selection</h3>
+<p><img src=img/conslogLogSelection.gif alt="GIF animation showing Conslog at work"></p>
+<p>It wraps the selection in <code>console.log</code>s. But only the part of the selection <strong>until the first semicolon</strong> is getting wrapped, the rest remains as is.</p>
+<p>If multiple lines are selected, each line is treated like an individual selection, adding multiple <code>console.log</code>s. Skips empty lines and comment lines.</p>
+<h4 id=behind-the-scenes>Behind the scenes</h4>
+<p>This is the regular expression that does the magic:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#3aa>/^(?!\/\/)([^\r\n][^;\r\n]*)(;)?(.*)$/gm</span>
+</code></pre></div><h3 id=undo-logs>Undo logs</h3>
+<p><img src=img/conslogUndoLogSelection.gif alt="GIF animation showing Conslog at work"></p>
+<p>Removes <code>console.log</code> from selected lines, unwrapping the argument. Reverts the effect of &ldquo;<em>Log selection</em>&rdquo; or &ldquo;<em>Log lines &mldr;</em>&rdquo;.</p>
+<h4 id=behind-the-scenes-1>Behind the scenes</h4>
+<p>This is the regular expression that does the trick:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#3aa>/console\.log\(|(?&lt;=^ *console\.log\(.*)\)(?=;)/gm</span>
+</code></pre></div><h3 id=delete-console-logs>Delete console logs</h3>
+<p><img src=img/conslogDeleteConsoleLogs.gif alt="GIF animation showing Conslog at work"></p>
+<p>If it turns out that you <em>really</em> like <code>console.log</code> debugging, chances are that your code has plenty of lines temporarily logging variables. Get rid of them in one go with this snippet.</p>
+<h4 id=behind-the-scenes-2>Behind the scenes</h4>
+<p>This is the regular expression that does the work:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#3aa>/^ *console\.log\(.*(\r\n|\r|\n)?/gm</span>
+</code></pre></div>
+<div class=blog-tags>
+<a href=https://www.hrmn.dev/tags/projects/>projects</a>&nbsp;
+<a href=https://www.hrmn.dev/tags/vscode/>vscode</a>&nbsp;
+<a href=https://www.hrmn.dev/tags/regular-expressions/>regular expressions</a>&nbsp;
+</div>
+<hr>
+<section id=social-share>
+<div class="list-inline footer-links">
+<div class=share-box aria-hidden=true>
+<ul class=share>
+<li>
+<a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fwww.hrmn.dev%2fpost%2fconslog%2f&title=Conslog" target=_blank title="Share on LinkedIn">
+<i class="fab fa-linkedin"></i>
+</a>
+</li>
+<li>
+<a href="//twitter.com/share?url=https%3a%2f%2fwww.hrmn.dev%2fpost%2fconslog%2f&text=Conslog&via=mrchrmn" target=_blank title="Share on Twitter">
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href="//reddit.com/submit?url=https%3a%2f%2fwww.hrmn.dev%2fpost%2fconslog%2f&title=Conslog" target=_blank title="Share on Reddit">
+<i class="fab fa-reddit"></i>
+</a>
+</li>
+</div>
+</div>
+</section>
+</article>
+<ul class="pager blog-pager">
+<li class=previous>
+<a href=https://www.hrmn.dev/post/microscopic-space/ data-toggle=tooltip data-placement=top title="Microscopic Space">&larr; Previous Post</a>
+</li>
+<li class=next>
+<a href=https://www.hrmn.dev/post/thrsqr/ data-toggle=tooltip data-placement=top title=ThrSqr>Next Post &rarr;</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<footer>
+<div class=container>
+<div class=row>
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<ul class="list-inline text-center footer-links">
+<li>
+<a href=mailto:marc@hrmn.dev title="Email me">
+<span class="fa-stack fa-lg">
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+<li>
+<a href=https://github.com/mrchrmn title=GitHub>
+<span class="fa-stack fa-lg">
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-github fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/mrchrmn title=Twitter>
+<span class="fa-stack fa-lg">
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+<li>
+<a href=https://linkedin.com/in/marchermann title=LinkedIn>
+<span class="fa-stack fa-lg">
+<i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</li>
+</ul>
+<p class="credits copyright text-muted">
+Marc Hermann
+&nbsp;&bull;&nbsp;
+<a href=https://www.hrmn.dev>hrmn.dev</a>
+</p>
+<p class="credits theme-by text-muted">
+<a href=https://gohugo.io>Hugo v0.88.1</a> powered &nbsp;&bull;&nbsp; Theme <a href=https://github.com/halogenica/beautifulhugo>Beautiful Hugo</a> adapted from <a href=https://deanattali.com/beautiful-jekyll/>Beautiful Jekyll</a>
+</p>
+</div>
+</div>
+</div>
+</footer><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js integrity=sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js integrity=sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe crossorigin=anonymous></script>
+<script src=https://code.jquery.com/jquery-1.12.4.min.js integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin=anonymous></script>
+<script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa crossorigin=anonymous></script>
+<script src=https://www.hrmn.dev/js/main.js></script><script>renderMathInElement(document.body)</script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js integrity=sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js integrity=sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q crossorigin=anonymous></script><script src=https://www.hrmn.dev/js/load-photoswipe.js></script>
+</body>
+</html>
