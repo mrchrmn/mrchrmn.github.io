@@ -6,7 +6,7 @@
 <title>Conslog | hrmn.dev</title>
 <meta name=description content="A VS Code extension for a better console.log() experience">
 <meta name=author content="Marc Hermann"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"hrmn.dev","url":"https:\/\/www.hrmn.dev"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/www.hrmn.dev"}</script>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/www.hrmn.dev","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/www.hrmn.dev\/post\/conslog\/","name":"Conslog"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Marc Hermann"},"headline":"Conslog","description":"Conslog is a great time saver for JavaScript learners, making it super easy to add or remove console.logs to and from selected code.\n","inLanguage":"en","wordCount":259,"datePublished":"2021-07-04T00:00:00","dateModified":"2021-07-04T00:00:00","image":"https:\/\/www.hrmn.dev\/img\/pixel-marc-512x512.png","keywords":["projects, vscode, regular expressions"],"mainEntityOfPage":"https:\/\/www.hrmn.dev\/post\/conslog\/","publisher":{"@type":"Organization","name":"https:\/\/www.hrmn.dev","logo":{"@type":"ImageObject","url":"https:\/\/www.hrmn.dev\/img\/pixel-marc-512x512.png","height":60,"width":60}}}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/www.hrmn.dev","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/www.hrmn.dev\/post\/conslog\/","name":"Conslog"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Marc Hermann"},"headline":"Conslog","description":"Did you know that JavaScript learners spend more than 50 percent of their time surrounding code challenge test cases with console.log()? I was one of them. Until I created Conslog, a little VS Code snippet extension to make my life (and yours?) easier.","inLanguage":"en","wordCount":43,"datePublished":"2021-07-04T00:00:00","dateModified":"2021-07-04T00:00:00","image":"https:\/\/www.hrmn.dev\/img\/pixel-marc-512x512.png","keywords":["projects, vscode, regular expressions"],"mainEntityOfPage":"https:\/\/www.hrmn.dev\/post\/conslog\/","publisher":{"@type":"Organization","name":"https:\/\/www.hrmn.dev","logo":{"@type":"ImageObject","url":"https:\/\/www.hrmn.dev\/img\/pixel-marc-512x512.png","height":60,"width":60}}}</script>
 <meta property="og:title" content="Conslog">
 <meta property="og:description" content="A VS Code extension for a better console.log() experience">
 <meta property="og:image" content="https://www.hrmn.dev/img/conslogLogSelection.gif">
@@ -125,32 +125,7 @@
 <div class=row>
 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 <article role=main class=blog-post>
-<p><em>Conslog is a great time saver for JavaScript learners, making it super easy to add or remove <code>console.log</code>s to and from selected code.</em></p>
-<p>The idea behind it was to make it easier to log the test cases that are sometimes provided with coding problems, eg. on Codewars or Leetcode, for example like this:</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>mySolution(testCase); <span style=color:#09f;font-style:italic>// =&gt; true
-</span><span style=color:#09f;font-style:italic></span>mySolution(<span style=color:#c30>&#34;testCase&#34;</span>); <span style=color:#09f;font-style:italic>// =&gt; &#34;Casetest&#34;
-</span></code></pre></div><p>For a full description visit the <a href="https://marketplace.visualstudio.com/items?itemName=mrchrmn.conslog">Visual Studio Marketplace</a> or the project&rsquo;s <a href=https://github.com/mrchrmn/conslog>Github page</a>.</p>
-<p>After getting to grips with how VS Code snippets and extensions work, the project was basically an exercise in regular expressions. Check out a few of the key features below to find out what regular expression is at work.</p>
-<h3 id=log-selection>Log selection</h3>
-<p><img src=img/conslogLogSelection.gif alt="GIF animation showing Conslog at work"></p>
-<p>It wraps the selection in <code>console.log</code>s. But only the part of the selection <strong>until the first semicolon</strong> is getting wrapped, the rest remains as is.</p>
-<p>If multiple lines are selected, each line is treated like an individual selection, adding multiple <code>console.log</code>s. Skips empty lines and comment lines.</p>
-<h4 id=behind-the-scenes>Behind the scenes</h4>
-<p>This is the regular expression that does the magic:</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#3aa>/^(?!\/\/)([^\r\n][^;\r\n]*)(;)?(.*)$/gm</span>
-</code></pre></div><h3 id=undo-logs>Undo logs</h3>
-<p><img src=img/conslogUndoLogSelection.gif alt="GIF animation showing Conslog at work"></p>
-<p>Removes <code>console.log</code> from selected lines, unwrapping the argument. Reverts the effect of &ldquo;<em>Log selection</em>&rdquo; or &ldquo;<em>Log lines &mldr;</em>&rdquo;.</p>
-<h4 id=behind-the-scenes-1>Behind the scenes</h4>
-<p>This is the regular expression that does the trick:</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#3aa>/console\.log\(|(?&lt;=^ *console\.log\(.*)\)(?=;)/gm</span>
-</code></pre></div><h3 id=delete-console-logs>Delete console logs</h3>
-<p><img src=img/conslogDeleteConsoleLogs.gif alt="GIF animation showing Conslog at work"></p>
-<p>If it turns out that you <em>really</em> like <code>console.log</code> debugging, chances are that your code has plenty of lines temporarily logging variables. Get rid of them in one go with this snippet.</p>
-<h4 id=behind-the-scenes-2>Behind the scenes</h4>
-<p>This is the regular expression that does the work:</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#3aa>/^ *console\.log\(.*(\r\n|\r|\n)?/gm</span>
-</code></pre></div>
+<p><em>Did you know that JavaScript learners spend more than 50 percent of their time surrounding code challenge test cases with <code>console.log()</code>? I was one of them. Until I created Conslog, a little VS Code snippet extension to make my life (and yours?) easier.</em></p>
 <div class=blog-tags>
 <a href=https://www.hrmn.dev/tags/projects/>projects</a>&nbsp;
 <a href=https://www.hrmn.dev/tags/vscode/>vscode</a>&nbsp;
