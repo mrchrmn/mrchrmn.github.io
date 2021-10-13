@@ -3,19 +3,19 @@
 <meta charset=utf-8>
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>Berlin Defendr | hrmn.dev</title>
-<meta name=description content="A tiny game from scratch">
+<title>Conslog | hrmn.dev</title>
+<meta name=description content="A VS Code extension for a better console.log() experience">
 <meta name=author content="Marc Hermann"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"hrmn.dev","url":"https:\/\/www.hrmn.dev"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/www.hrmn.dev"}</script>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/www.hrmn.dev","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/www.hrmn.dev\/post\/berlin-defendr\/","name":"Berlin defendr"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Marc Hermann"},"headline":"Berlin Defendr","description":"The problem set 0 of Harvard\u0026rsquo;s CS50x 2020 edition was to create a small application using MIT\u0026rsquo;s graphical programming interface Scratch. I decided to make this tiny (tiny!) game.\n","inLanguage":"en","wordCount":365,"datePublished":"2020-01-23T00:00:00","dateModified":"2020-01-23T00:00:00","image":"https:\/\/www.hrmn.dev\/img\/pixel-marc-512x512.png","keywords":["projects, scratch"],"mainEntityOfPage":"https:\/\/www.hrmn.dev\/post\/berlin-defendr\/","publisher":{"@type":"Organization","name":"https:\/\/www.hrmn.dev","logo":{"@type":"ImageObject","url":"https:\/\/www.hrmn.dev\/img\/pixel-marc-512x512.png","height":60,"width":60}}}</script>
-<meta property="og:title" content="Berlin Defendr">
-<meta property="og:description" content="A tiny game from scratch">
-<meta property="og:image" content="https://www.hrmn.dev/img/berlin-defendr-gameplay.png">
-<meta property="og:url" content="https://www.hrmn.dev/post/berlin-defendr/">
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/www.hrmn.dev","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/www.hrmn.dev\/project\/conslog\/","name":"Conslog"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Marc Hermann"},"headline":"Conslog","description":"Did you know that JavaScript learners spend more than 50 percent of their time surrounding code challenge test cases with console.log()? I was one of them. Until I created Conslog, a little VS Code snippet extension to make my life (and yours?) easier.","inLanguage":"en","wordCount":43,"datePublished":"2021-07-04T00:00:00","dateModified":"2021-07-04T00:00:00","image":"https:\/\/www.hrmn.dev\/img\/pixel-marc-512x512.png","keywords":["projects, vscode, regular expressions"],"mainEntityOfPage":"https:\/\/www.hrmn.dev\/project\/conslog\/","publisher":{"@type":"Organization","name":"https:\/\/www.hrmn.dev","logo":{"@type":"ImageObject","url":"https:\/\/www.hrmn.dev\/img\/pixel-marc-512x512.png","height":60,"width":60}}}</script>
+<meta property="og:title" content="Conslog">
+<meta property="og:description" content="A VS Code extension for a better console.log() experience">
+<meta property="og:image" content="https://www.hrmn.dev/img/conslogLogSelection.gif">
+<meta property="og:url" content="https://www.hrmn.dev/project/conslog/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="hrmn.dev">
-<meta name=twitter:title content="Berlin Defendr">
-<meta name=twitter:description content="A tiny game from scratch">
-<meta name=twitter:image content="https://www.hrmn.dev/img/berlin-defendr-gameplay.png">
+<meta name=twitter:title content="Conslog">
+<meta name=twitter:description content="A VS Code extension for a better console.log() experience">
+<meta name=twitter:image content="https://www.hrmn.dev/img/conslogLogSelection.gif">
 <meta name=twitter:card content="summary">
 <meta name=twitter:site content="@mrchrmn">
 <meta name=twitter:creator content="@mrchrmn">
@@ -49,11 +49,10 @@
 <li class=navlinks-container>
 <a class=navlinks-parent>Projects</a>
 <div class=navlinks-children>
-<a href=/post>Overview</a>
-<a href=/post/thrsqr/>ThrSqr</a>
-<a href=/post/conslog/>Conslog</a>
-<a href=/post/microscopic-space/>Microscopic Space</a>
-<a href=/post/berlin-defendr/>Berlin Defendr</a>
+<a href=/project/thrsqr/>ThrSqr</a>
+<a href=/project/conslog/>Conslog</a>
+<a href=/project/microscopic-space/>Microscopic Space</a>
+<a href=/project/berlin-defendr/>Berlin Defendr</a>
 </div>
 </li>
 </ul>
@@ -108,12 +107,10 @@
 <div class=container>
 <div class=row>
 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<div class=post-heading>
-<h1>Berlin Defendr</h1>
-<h2 class=post-subheading>A tiny game from scratch</h2>
-<span class=post-meta>
-<i class="fas fa-globe"></i>&nbsp;<a href=https://scratch.mit.edu/projects/361707825/>Play it!</a>
-</span>
+<div class=project-heading>
+<h1>Conslog</h1>
+<hr class=small>
+<h2 class=project-subheading>A VS Code extension for a better console.log() experience</h2>
 </div>
 </div>
 </div>
@@ -124,32 +121,11 @@
 <div class=row>
 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 <article role=main class=blog-post>
-<p><em>The <a href=https://cs50.harvard.edu/x/2020/psets/0/scratch/>problem set 0</a> of Harvard&rsquo;s CS50x 2020 edition was to create a small application using MIT&rsquo;s graphical programming interface <a href=https://scratch.mit.edu/>Scratch</a>. I decided to make <a href=https://scratch.mit.edu/projects/361707825/>this tiny (tiny!) game</a>.</em></p>
-<p><img src=img/berlin-defendr-gameplay.png alt></p>
-<p>For many years, long before the trend of retro games, I thought someone needed to make a Defender clone set in a pixelated sky above the pixelated cities of the world. But no one did and I myself never got further than a few scribbles.</p>
-<p>Fast forward to 2020, when I embarked on my journey to get back into software development after a long hiatus. I started with Harvard&rsquo;s excellent CS50x while figuring out the way forward. The problem set of week 0 was to create a small program in Scratch under these requirements:</p>
-<ul>
-<li><em>Your project must have at least two sprites, at least one of which must resemble something other than a cat.</em></li>
-<li><em>Your project must have at least three scripts total (i.e., not necessarily three per sprite).</em></li>
-<li><em>Your project must use at least one condition, one loop, and one variable.</em></li>
-<li><em>Your project must use at least one sound.</em></li>
-<li><em>Your project should be more complex than most of those demonstrated in lecture.</em></li>
-</ul>
-<p>I knew immediately what to do: build a very simple version of that Defender clone I had in mind way back when. And that&rsquo;s exactly what I did and you can <a href=https://scratch.mit.edu/projects/361707825/>play it here</a> to save Berlin (where I am based) from over-tourism. Clearly this is a pre-Covid-19 scenario when tourism was still a thing.</p>
-<h2 id=scratch-code>Scratch code</h2>
-<h3 id=player-sprite>Player sprite</h3>
-<p>The player sprite, a very basic rendition of Berlin&rsquo;s iconic Brandenburg gate, can&rsquo;t do much but move around an disappear when hit.</p>
-<p><img src=img/berlin-defendr-player-scratch.png alt="Scratch code for player"></p>
-<h3 id=bullet-sprite>Bullet sprite</h3>
-<p>The bullet sprite handles the shooting. A hidden prototype is parented to the position of the player. Upon firing a clone is revealed and set in motion, only to be deleted when hitting an enemy or the screen edge.</p>
-<p><img src=img/berlin-defendr-bullet-scratch.png alt="Scratch code for bullet"></p>
-<h3 id=enemy-sprite>Enemy sprite</h3>
-<p>The enemy sprite is the most interesting. A hidden prototype clones itself in ever shorter intervals. The clones on the other hand become faster as the game progresses. They disappear upon contact with the bullet and trigger a &ldquo;game over&rdquo; when they touch the opposite edge of the screen.</p>
-<p><img src=img/berlin-defendr-enemy-scratch.png alt="Scratch code for enemy"></p>
-<p><img src=img/berlin-defendr-game-over.png alt></p>
+<p><em>Did you know that JavaScript learners spend more than 50 percent of their time surrounding code challenge test cases with <code>console.log()</code>? I was one of them. Until I created Conslog, a little VS Code snippet extension to make my life (and yours?) easier.</em></p>
 <div class=blog-tags>
 <a href=https://www.hrmn.dev/tags/projects/>projects</a>&nbsp;
-<a href=https://www.hrmn.dev/tags/scratch/>scratch</a>&nbsp;
+<a href=https://www.hrmn.dev/tags/vscode/>vscode</a>&nbsp;
+<a href=https://www.hrmn.dev/tags/regular-expressions/>regular expressions</a>&nbsp;
 </div>
 <hr>
 <section id=social-share>
@@ -157,17 +133,17 @@
 <div class=share-box aria-hidden=true>
 <ul class=share>
 <li>
-<a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fwww.hrmn.dev%2fpost%2fberlin-defendr%2f&title=Berlin%20Defendr" target=_blank title="Share on LinkedIn">
+<a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fwww.hrmn.dev%2fproject%2fconslog%2f&title=Conslog" target=_blank title="Share on LinkedIn">
 <i class="fab fa-linkedin"></i>
 </a>
 </li>
 <li>
-<a href="//twitter.com/share?url=https%3a%2f%2fwww.hrmn.dev%2fpost%2fberlin-defendr%2f&text=Berlin%20Defendr&via=mrchrmn" target=_blank title="Share on Twitter">
+<a href="//twitter.com/share?url=https%3a%2f%2fwww.hrmn.dev%2fproject%2fconslog%2f&text=Conslog&via=mrchrmn" target=_blank title="Share on Twitter">
 <i class="fab fa-twitter"></i>
 </a>
 </li>
 <li>
-<a href="//reddit.com/submit?url=https%3a%2f%2fwww.hrmn.dev%2fpost%2fberlin-defendr%2f&title=Berlin%20Defendr" target=_blank title="Share on Reddit">
+<a href="//reddit.com/submit?url=https%3a%2f%2fwww.hrmn.dev%2fproject%2fconslog%2f&title=Conslog" target=_blank title="Share on Reddit">
 <i class="fab fa-reddit"></i>
 </a>
 </li>
@@ -176,8 +152,11 @@
 </section>
 </article>
 <ul class="pager blog-pager">
+<li class=previous>
+<a href=https://www.hrmn.dev/project/microscopic-space/ data-toggle=tooltip data-placement=top title="Microscopic Space">&larr; Previous Post</a>
+</li>
 <li class=next>
-<a href=https://www.hrmn.dev/post/microscopic-space/ data-toggle=tooltip data-placement=top title="Microscopic Space">Next Post &rarr;</a>
+<a href=https://www.hrmn.dev/project/thrsqr/ data-toggle=tooltip data-placement=top title=ThrSqr>Next Post &rarr;</a>
 </li>
 </ul>
 </div>
