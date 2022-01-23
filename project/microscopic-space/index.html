@@ -130,9 +130,9 @@
 <h3 id=idea>Idea</h3>
 <p>It quickly became clear that generating the network procedurally by replicating instances of the base models instead of copying them was the way forward. This would save time and polygons (because LOD stand-ins had only be applied to the six base models before replication).</p>
 <p>But that was still easier said (or thought) than done.</p>
-<p>The six models wer similar in that they each had several dendrites and one axon that would connect to the body of a neighboring cell. But the axons were of different length and every neuron had to be rotated in different angles to connect without (clearly visible) intersection of dendrites and axons.</p>
+<p>The six models wer similar in that they each had several dendrites and one axon that would connect to the body of a neighbouring cell. But the axons were of different length and every neuron had to be rotated in different angles to connect without (clearly visible) intersection of dendrites and axons.</p>
 <p>The central idea that solved the problem was to move the origin of a neuron from the center of its own cell body to beyond its axons where the parent neuron&rsquo;s cell body would be. In the center of each the neuron would then be three null locators pointing in the direction where a child neuron could dock.</p>
-<p>By parenting the children (with their offset origins) to the null locators (at the body centre) the child neurons would automatically &ldquo;grow away&rdquo; from the parent in permissable directions.</p>
+<p>By parenting the children (with their offset origins) to the null locators (at the body centre) the child neurons would automatically &ldquo;grow away&rdquo; from the parent in allowed directions.</p>
 <p>Which in the end looks like this:</p>
 <video controls preload=auto width=100% autoplay loop playsinline class=html-video>
 <source src=/project/microscopic-space/img/mtb-build-network.mp4 type=video/mp4>
