@@ -1,454 +1,214 @@
-<!doctype html><html lang=en itemscope itemtype=http://schema.org/WebPage>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>Microscopic Space | i ❤️ logic — hrmn.dev | Marc Hermann</title>
-<meta name=description content="A procedural network for an award-winning VR experience">
-<meta name=author content="Marc Hermann"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"i ❤️ logic — hrmn.dev","url":"https:\/\/www.hrmn.dev"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/www.hrmn.dev"}</script>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/www.hrmn.dev","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/www.hrmn.dev\/project\/microscopic-space\/","name":"Microscopic space"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Marc Hermann"},"headline":"Microscopic Space","description":"The task: fly through a vast network of neuron models and visualize the propagation of \u0026ldquo;signals\u0026rdquo; across the network. My solution: generate the network procedurally, and the rest will follow.\n","inLanguage":"en","wordCount":1279,"datePublished":"2020-10-31T00:00:00","dateModified":"2020-10-31T00:00:00","image":"https:\/\/www.hrmn.dev\/img\/pixel-marc-512x512.png","keywords":["unity, c-sharp, procedural network, virtual reality"],"mainEntityOfPage":"https:\/\/www.hrmn.dev\/project\/microscopic-space\/","publisher":{"@type":"Organization","name":"https:\/\/www.hrmn.dev","logo":{"@type":"ImageObject","url":"https:\/\/www.hrmn.dev\/img\/pixel-marc-512x512.png","height":60,"width":60}}}</script>
-<meta property="og:title" content="Microscopic Space">
-<meta property="og:description" content="A procedural network for an award-winning VR experience">
-<meta property="og:image" content="https://www.hrmn.dev/img/pixel-marc-512x512.png">
-<meta property="og:url" content="https://www.hrmn.dev/project/microscopic-space/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="i ❤️ logic — hrmn.dev">
-<meta name=twitter:title content="Microscopic Space">
-<meta name=twitter:description content="A procedural network for an award-winning VR experience">
-<meta name=twitter:image content="https://www.hrmn.dev/img/pixel-marc-512x512.png">
-<meta name=twitter:card content="summary">
-<meta name=twitter:site content="@mrchrmn">
-<meta name=twitter:creator content="@mrchrmn">
-<link href=https://www.hrmn.dev/favicon.ico rel=icon type=image/x-icon>
-<meta name=generator content="Hugo 0.92.1">
-<link rel=alternate href=https://www.hrmn.dev/index.xml type=application/rss+xml title="i ❤️ logic — hrmn.dev"><link rel=stylesheet href=https://www.hrmn.dev/css/katex.min.css>
-<link rel=stylesheet href=https://www.hrmn.dev/fontawesome/css/all.css>
-<link rel=stylesheet href=https://www.hrmn.dev/css/bootstrap.min.css><link rel=stylesheet href=https://www.hrmn.dev/css/main.css><link rel=stylesheet href=https://www.hrmn.dev/css/fonts.css><link rel=stylesheet href=https://www.hrmn.dev/css/syntax.css><link rel=stylesheet href=https://www.hrmn.dev/css/codeblock.css>
-</head>
-<body>
-<nav class="navbar navbar-default navbar-fixed-top navbar-custom">
-<div class=container-fluid>
-<div class=navbar-header>
-<button type=button class=navbar-toggle data-toggle=collapse data-target=#main-navbar>
+<!doctype html><html lang=en itemscope itemtype=http://schema.org/WebPage><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><title>Microscopic Space | i ❤️ logic — hrmn.dev | Marc Hermann</title><meta name=description content="A procedural network for an award-winning VR experience"><meta name=author content="Marc Hermann"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"i ❤️ logic — hrmn.dev","url":"https:\/\/www.hrmn.dev"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/www.hrmn.dev"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/www.hrmn.dev","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/www.hrmn.dev\/project\/microscopic-space\/","name":"Microscopic space"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Marc Hermann"},"headline":"Microscopic Space","description":"The task: fly through a vast network of neuron models and visualize the propagation of \u0026ldquo;signals\u0026rdquo; across the network. My solution: generate the network procedurally, and the rest will follow.\n","inLanguage":"en","wordCount":1279,"datePublished":"2020-10-31T00:00:00","dateModified":"2020-10-31T00:00:00","image":"https:\/\/www.hrmn.dev\/img\/pixel-marc-512x512.png","keywords":["unity, c-sharp, procedural network, virtual reality"],"mainEntityOfPage":"https:\/\/www.hrmn.dev\/project\/microscopic-space\/","publisher":{"@type":"Organization","name":"https:\/\/www.hrmn.dev","logo":{"@type":"ImageObject","url":"https:\/\/www.hrmn.dev\/img\/pixel-marc-512x512.png","height":60,"width":60}}}</script><meta property="og:title" content="Microscopic Space"><meta property="og:description" content="A procedural network for an award-winning VR experience"><meta property="og:image" content="https://www.hrmn.dev/img/pixel-marc-512x512.png"><meta property="og:url" content="https://www.hrmn.dev/project/microscopic-space/"><meta property="og:type" content="website"><meta property="og:site_name" content="i ❤️ logic — hrmn.dev"><meta name=twitter:title content="Microscopic Space"><meta name=twitter:description content="A procedural network for an award-winning VR experience"><meta name=twitter:image content="https://www.hrmn.dev/img/pixel-marc-512x512.png"><meta name=twitter:card content="summary"><meta name=twitter:site content="@mrchrmn"><meta name=twitter:creator content="@mrchrmn"><link href=https://www.hrmn.dev/favicon.ico rel=icon type=image/x-icon><meta name=generator content="Hugo 0.96.0"><link rel=alternate href=https://www.hrmn.dev/index.xml type=application/rss+xml title="i ❤️ logic — hrmn.dev"><link rel=stylesheet href=https://www.hrmn.dev/css/katex.min.css><link rel=stylesheet href=https://www.hrmn.dev/fontawesome/css/all.css><link rel=stylesheet href=https://www.hrmn.dev/css/bootstrap.min.css><link rel=stylesheet href=https://www.hrmn.dev/css/main.css><link rel=stylesheet href=https://www.hrmn.dev/css/fonts.css><link rel=stylesheet href=https://www.hrmn.dev/css/syntax.css><link rel=stylesheet href=https://www.hrmn.dev/css/codeblock.css></head><body><nav class="navbar navbar-default navbar-fixed-top navbar-custom"><div class=container-fluid><div class=navbar-header><button type=button class=navbar-toggle data-toggle=collapse data-target=#main-navbar>
 <span class=sr-only>Toggle navigation</span>
 <span class=icon-bar></span>
 <span class=icon-bar></span>
-<span class=icon-bar></span>
-</button>
-<a class=navbar-brand href=https://www.hrmn.dev>i ❤️ logic — hrmn.dev</a>
-</div>
-<div class="collapse navbar-collapse" id=main-navbar>
-<ul class="nav navbar-nav navbar-right">
-<li class=navlinks-container>
-<a class=navlinks-parent>Marc</a>
-<div class=navlinks-children>
-<a href=/page/resume/>Resume</a>
+<span class=icon-bar></span></button>
+<a class=navbar-brand href=https://www.hrmn.dev>i ❤️ logic — hrmn.dev</a></div><div class="collapse navbar-collapse" id=main-navbar><ul class="nav navbar-nav navbar-right"><li class=navlinks-container><a class=navlinks-parent>Marc</a><div class=navlinks-children><a href=/page/resume/>Resume</a>
 <a href=/page/other-things-i-made/>Other things I made</a>
-<a href=/page/unimportant-facts/>Unimportant facts</a>
-</div>
-</li>
-</ul>
-</div>
-<div class=avatar-container>
-<div class=avatar-img-border>
-<a title="i ❤️ logic — hrmn.dev" href=https://www.hrmn.dev>
-<img class=avatar-img src=https://www.hrmn.dev/img/pixel-marc-512x512.png alt="i ❤️ logic — hrmn.dev">
-</a>
-</div>
-</div>
-</div>
-</nav>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<a href=/page/unimportant-facts/>Unimportant facts</a></div></li></ul></div><div class=avatar-container><div class=avatar-img-border><a title="i ❤️ logic — hrmn.dev" href=https://www.hrmn.dev><img class=avatar-img src=https://www.hrmn.dev/img/pixel-marc-512x512.png alt="i ❤️ logic — hrmn.dev"></a></div></div></div></nav><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div>
-<header class=header-section>
-<div class="intro-header no-img">
-<div class=container>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<div class=project-heading>
-<h1>Microscopic Space</h1>
-<hr class=small>
-<h2 class=project-subheading>A procedural network for an award-winning VR experience</h2>
-</div>
-</div>
-</div>
-</div>
-</div>
-</header>
-<div class=container role=main>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<article role=main class=blog-post>
-<p><em>The task: fly through a vast network of neuron models and visualize the propagation of &ldquo;signals&rdquo; across the network. My solution: generate the network procedurally, and the rest will follow.</em></p>
-<p>Let&rsquo;s begin with the result before looking behind the scenes.</p>
-<video controls preload=auto width=100% autoplay loop playsinline class=html-video>
-<source src=/project/microscopic-space/img/mtb-network-flight.mp4 type=video/mp4>
-<span>Your browser doesn't support embedded videos, but don't worry, you can <a href=/project/microscopic-space/img/mtb-network-flight.mp4>download it</a> and watch it with your favorite video player!</span>
-</video>
-<h3 id=challenge>Challenge</h3>
-<p>The award-winning VR experience <em>Mind The Brain!</em> by <a href=https://www.myndstorm.me/>mYndstorm productions</a> is a dream-like, non-scientific journey through the brain. Some section of the experience are programmed to react to the neural activity of the viewer. This is done through a brain-computer-interface (BCI) that converts a live electro encephalogram into usable variables for the program code.</p>
-<p>One key scene of the experience, called &ldquo;Microscopic Space&rdquo;, one I was asked to create, was a minute-long flight (11 minutes to be precise) through a network of neuron 3D models. Additionally the network had to be traversed by lights, visualizing the propagation of electric signals through the brain. The frequency and speed with which these lights travel across the network had to depend on the brain activity of the viewer.</p>
-<p>A first attempt at hand crafting a network from my 5 base neuron 3D models in a 3D application first, and importing the whole network scene into Unity was not fruitful for two reasons:</p>
-<ul>
-<li>It was a cumbersome process to arrange the six neuron models in a connected way, too laborious for the intended duration of the scene.</li>
-<li>It did was very polygon heavy, and with dozens and hundreds of individual neuron model copies applying different level-of-detail (LOD) versions would again be a lot of work.</li>
-</ul>
-<h3 id=approach>Approach</h3>
-<p>It quickly became clear that generating the network procedurally by replicating instances of the base models instead of copying them was the way forward. This would save time and polygons (because LOD stand-ins had only be applied to the six base models before replication).</p>
-<p>But that was still easier said (or thought) than done.</p>
-<p>The six models were similar in that they each had several dendrites and one axon that would connect to the body of a neighbouring cell. But the axons were of different length, the dendrites in different directions, and every neuron had to be rotated in different angles to connect without (clearly visible) intersection of dendrites and axons.</p>
-<h4 id=heureka>Heureka!</h4>
-<p>The central idea that solved the problem was to <em>move the origin of a neuron from the center of its own cell body to beyond its axons where the parent neuron&rsquo;s cell body would be</em>. In the center of each the neuron would then be three null locators pointing in the direction where a child neuron could dock.</p>
-<p>By parenting the children (with their offset origins) to the null locators (at the body centre) the child neurons would automatically &ldquo;grow away&rdquo; from the parent in allowed directions.</p>
-<p>Which in the end looks like this:</p>
-<video controls preload=auto width=100% autoplay loop playsinline class=html-video>
-<source src=/project/microscopic-space/img/mtb-build-network.mp4 type=video/mp4>
-<span>Your browser doesn't support embedded videos, but don't worry, you can <a href=/project/microscopic-space/img/mtb-build-network.mp4>download it</a> and watch it with your favorite video player!</span>
-</video>
-<h3 id=c-and-unity-implementation>C# and Unity implementation</h3>
-<p>Because we used Unity&rsquo;s own version control system I cannot easily share a link to GitHub repository. But following is an abridged version of the relevant C# code, along with a look at the central elements in Unity. I stripped the code of references to our proprietary camera control system, and of the BCI connection.</p>
-<h4 id=helper-methods>Helper methods</h4>
-<p>Nothing to write home about in these two helper functions that helped randomizing certain aspects of the network.</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=color:#069;font-weight:700>public</span> <span style=color:#069;font-weight:700>static</span> <span style=color:#069;font-weight:700>class</span> <span style=color:#0a8;font-weight:700>NeuronHelper</span>
-{
-    <span style=color:#09f;font-style:italic>// Returns a random element from a list.
-</span><span style=color:#09f;font-style:italic></span>    <span style=color:#069;font-weight:700>public</span> <span style=color:#069;font-weight:700>static</span> T GetRandomElement&lt;T&gt;(<span style=color:#069;font-weight:700>this</span> List&lt;T&gt; list)
-    {
-        <span style=color:#069;font-weight:700>return</span> list[Random.Range(<span style=color:#f60>0</span>, list.Count)];
-    }
-
-    <span style=color:#09f;font-style:italic>// Returns a random variation of a base value. Variance in percent.
-</span><span style=color:#09f;font-style:italic></span>    <span style=color:#069;font-weight:700>public</span> <span style=color:#069;font-weight:700>static</span> <span style=color:#078;font-weight:700>float</span> GetRandomVariation(<span style=color:#078;font-weight:700>float</span> baseValue, <span style=color:#078;font-weight:700>int</span> variance)
-    {
-        <span style=color:#069;font-weight:700>return</span> baseValue + baseValue * Random.Range(-variance, variance) / <span style=color:#f60>100f</span>;
-    }
-
-}
-</code></pre></div><h4 id=neuron-network-controller>Neuron network controller</h4>
-<p>The neuron network controller class&mldr;</p>
-<ul>
-<li>provides an interface for the user to set parameters for the network generation through public variables,</li>
-<li>orchestrates the generation of neurons by instantiating and parenting them properly,</li>
-<li>initiates the &ldquo;firing&rdquo; animation on randomly chosen neurons across the network.</li>
-</ul>
-<div class=highlight><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=color:#069;font-weight:700>public</span> <span style=color:#069;font-weight:700>class</span> <span style=color:#0a8;font-weight:700>NeuronNetworkController</span> : MonoBehaviour
-{
-    <span style=color:#069;font-weight:700>internal</span> Transform NetworkTransform;
-
-    <span style=color:#09f;font-style:italic>// Chance for a neuron to fire randomly
-</span><span style=color:#09f;font-style:italic></span><span style=color:#309>    [Range(0, 1000)]</span>
-    <span style=color:#069;font-weight:700>public</span> <span style=color:#078;font-weight:700>int</span> FireChance = <span style=color:#f60>10</span>;
-
-    <span style=color:#09f;font-style:italic>// Chance for light to trigger next neuron to fire 
-</span><span style=color:#09f;font-style:italic></span><span style=color:#309>    [Range(0, 100)]</span>
-    <span style=color:#069;font-weight:700>public</span> <span style=color:#078;font-weight:700>int</span> TriggerChance = <span style=color:#f60>20</span>;
-
-    <span style=color:#09f;font-style:italic>// Speed of movement of the lights across the network
-</span><span style=color:#09f;font-style:italic></span><span style=color:#309>    [Range(0.25f, 1.5f)]</span>
-    <span style=color:#069;font-weight:700>public</span> <span style=color:#078;font-weight:700>float</span> LightSpeed = <span style=color:#f60>0.75f</span>;
-
-    <span style=color:#09f;font-style:italic>// Variance in speed
-</span><span style=color:#09f;font-style:italic></span><span style=color:#309>    [Range(0, 100)]</span>
-    <span style=color:#069;font-weight:700>public</span> <span style=color:#078;font-weight:700>int</span> LightSpeedVariance = <span style=color:#f60>50</span>;
-
-    <span style=color:#09f;font-style:italic>// Number of neurons in the network
-</span><span style=color:#09f;font-style:italic></span><span style=color:#309>    [Range(0, 5000)]</span>
-    <span style=color:#069;font-weight:700>public</span> <span style=color:#078;font-weight:700>int</span> MaxNeuronCount = <span style=color:#f60>2000</span>;
-
-    <span style=color:#09f;font-style:italic>// Probability of a child neuron being generated for each potential direction
-</span><span style=color:#09f;font-style:italic></span><span style=color:#309>    [Range(0, 100)]</span>
-    <span style=color:#069;font-weight:700>public</span> <span style=color:#078;font-weight:700>int</span> ChildSpawnProb = <span style=color:#f60>15</span>;
-
-    <span style=color:#069;font-weight:700>public</span> <span style=color:#078;font-weight:700>int</span> RandomSeed = <span style=color:#f60>1015</span>;
-
-    <span style=color:#09f;font-style:italic>// List of neuron prefab models from which to build the network 
-</span><span style=color:#09f;font-style:italic></span>    <span style=color:#069;font-weight:700>public</span> List&lt;GameObject&gt; NeuronPrefabs;
-
-    <span style=color:#09f;font-style:italic>// List of all generated neurons in the network
-</span><span style=color:#09f;font-style:italic></span>    List&lt;Neuron&gt; Neurons = <span style=color:#069;font-weight:700>new</span> List&lt;Neuron&gt;();
-
-    <span style=color:#069;font-weight:700>public</span> <span style=color:#078;font-weight:700>float</span> NeuronFireStartPosition = <span style=color:#f60>5f</span>;
-
-    <span style=color:#069;font-weight:700>public</span> <span style=color:#078;font-weight:700>int</span> NeuronCounter =&gt; Neurons.Count;
-
-    <span style=color:#09f;font-style:italic>// Create singleton of this class
-</span><span style=color:#09f;font-style:italic></span>    <span style=color:#069;font-weight:700>public</span> <span style=color:#069;font-weight:700>static</span> NeuronNetworkController Instance;
-
-
-    <span style=color:#069;font-weight:700>public</span> <span style=color:#069;font-weight:700>void</span> Awake()
-    {
-        Instance = <span style=color:#069;font-weight:700>this</span>;
-        NetworkTransform = GetComponent&lt;Transform&gt;();
-    }
-
-
-    <span style=color:#069;font-weight:700>public</span> <span style=color:#069;font-weight:700>void</span> CreateNeuron(Transform newNeuronTransform, Neuron parent)
-    {
-        <span style=color:#069;font-weight:700>if</span> (NeuronCounter &gt; MaxNeuronCount)
-        {
-            <span style=color:#069;font-weight:700>return</span>;
-        }
-
-        <span style=color:#078;font-weight:700>var</span> nextChild = Instantiate(NeuronPrefabs.GetRandomElement(), 
-                                    newNeuronTransform.position, 
-                                    newNeuronTransform.rotation, 
-                                    NetworkTransform
-                                    ).GetComponent&lt;Neuron&gt;();
-
-        nextChild.NeuronNumber = NeuronCounter;
-        
-        Neurons.Add(nextChild);
-
-        nextChild.Parent = parent;
-
-        parent.Children.Add(nextChild);
-    }
-
-
-    <span style=color:#069;font-weight:700>private</span> <span style=color:#069;font-weight:700>void</span> Update()
-    {
-        FireNeurons();
-    }
-
-
-    <span style=color:#069;font-weight:700>public</span> <span style=color:#069;font-weight:700>void</span> FireNeurons()
-    {      
-        <span style=color:#069;font-weight:700>if</span> (UnityEngine.Random.Range(<span style=color:#f60>0</span>, <span style=color:#f60>100</span>) &lt; FireChance % <span style=color:#f60>100</span>)
-        {
-            Neurons.GetRandomElement().Fire(NeuronHelper.GetRandomVariation(LightSpeed, LightSpeedVariance));
-        }
-
-        <span style=color:#069;font-weight:700>for</span> (<span style=color:#078;font-weight:700>int</span> i = <span style=color:#f60>1</span>; i &lt; Math.Floor(FireChance / <span style=color:#f60>100f</span>); i++)
-        {
-            Neurons.GetRandomElement().Fire(NeuronHelper.GetRandomVariation(LightSpeed, LightSpeedVariance));
-        }
-    }
-}
-</code></pre></div><h4 id=single-neuron>Single neuron</h4>
-<p>The neuron class&mldr;</p>
-<ul>
-<li>initiates the &ldquo;reproduction&rdquo; of child neurons on <code>Start()</code>,</li>
-<li>generates between one and three children by calling <code>CreateNeuron</code> on the neuron network controller,</li>
-<li>handles the &ldquo;firing&rdquo; animation,</li>
-<li>triggers neurons up or down the tree to start their &ldquo;firing&rdquo; animation.</li>
-</ul>
-<div class=highlight><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=color:#069;font-weight:700>public</span> <span style=color:#069;font-weight:700>class</span> <span style=color:#0a8;font-weight:700>Neuron</span> : MonoBehaviour
-{
-    <span style=color:#09f;font-style:italic>// New child child neurons can be placed at these coordinates with these orientations.
-</span><span style=color:#09f;font-style:italic></span>    <span style=color:#069;font-weight:700>public</span> List&lt;Transform&gt; Directions; 
-    
-    <span style=color:#069;font-weight:700>public</span> <span style=color:#078;font-weight:700>int</span> NeuronNumber { <span style=color:#069;font-weight:700>get</span>; <span style=color:#069;font-weight:700>set</span>; }
- 
-    <span style=color:#069;font-weight:700>internal</span> List&lt;Neuron&gt; Children = <span style=color:#069;font-weight:700>new</span> List&lt;Neuron&gt;();
-    <span style=color:#069;font-weight:700>internal</span> Neuron Parent;
-
-    <span style=color:#09f;font-style:italic>// Neuron firing is done via an animator
-</span><span style=color:#09f;font-style:italic></span>    <span style=color:#069;font-weight:700>internal</span> Animator Animator;
-
-    <span style=color:#069;font-weight:700>private</span> <span style=color:#069;font-weight:700>void</span> Awake()
-    {
-        Animator = GetComponent&lt;Animator&gt;();
-        Animator.enabled = <span style=color:#069;font-weight:700>false</span>;
-    }
-
-    <span style=color:#069;font-weight:700>void</span> Start()
-    {
-        GenerateChildren();
-    }
-
-    <span style=color:#069;font-weight:700>private</span> <span style=color:#069;font-weight:700>void</span> GenerateChildren()
-    {
-        UnityEngine.Random.seed = NeuronNetworkController.Instance.RandomSeed + NeuronNumber;
-
-        <span style=color:#069;font-weight:700>foreach</span> (<span style=color:#078;font-weight:700>var</span> direction <span style=color:#069;font-weight:700>in</span> Directions)
-        {
-            <span style=color:#069;font-weight:700>if</span> (UnityEngine.Random.Range(<span style=color:#f60>0</span>, <span style=color:#f60>100</span>) &lt; NeuronNetworkController.Instance.ChildSpawnProb)
-            {
-                NeuronNetworkController.Instance.CreateNeuron(direction, <span style=color:#069;font-weight:700>this</span>);
-            }
-        }
-
-        <span style=color:#069;font-weight:700>if</span> (Children.Count &lt; <span style=color:#f60>1</span>)
-            NeuronNetworkController.Instance.CreateNeuron(Directions.GetRandomElement(), <span style=color:#069;font-weight:700>this</span>);
-    }
-
-
-    <span style=color:#069;font-weight:700>internal</span> <span style=color:#069;font-weight:700>void</span> Fire(<span style=color:#078;font-weight:700>float</span> speed)
-    {
-        Animator.enabled = <span style=color:#069;font-weight:700>true</span>;
-        Animator.SetFloat(<span style=color:#c30>&#34;MotionSpeedFactor&#34;</span>, speed);
-
-        <span style=color:#069;font-weight:700>if</span> (UnityEngine.Random.Range(<span style=color:#f60>0</span>, <span style=color:#f60>2</span>) == <span style=color:#f60>1</span>)
-            Animator.SetTrigger(<span style=color:#c30>&#34;FireNeuronDown&#34;</span>);
-        <span style=color:#069;font-weight:700>else</span>
-            Animator.SetTrigger(<span style=color:#c30>&#34;FireNeuronDown&#34;</span>);
-    }
-
-    <span style=color:#069;font-weight:700>internal</span> <span style=color:#069;font-weight:700>void</span> TurnOffAnimator()
-    {
-        Animator.enabled = <span style=color:#069;font-weight:700>false</span>;
-    }
-
-    <span style=color:#069;font-weight:700>public</span> <span style=color:#069;font-weight:700>void</span> TriggerDown()
-    {
-        <span style=color:#069;font-weight:700>if</span> ((Children.Count &gt; <span style=color:#f60>0</span>) &amp;&amp; (UnityEngine.Random.Range(<span style=color:#f60>0</span>, <span style=color:#f60>100</span>) &lt; NeuronNetworkController.Instance.TriggerChance))
-        {
-            <span style=color:#078;font-weight:700>var</span> rndChild = Children.GetRandomElement();
-            rndChild.Animator.enabled = <span style=color:#069;font-weight:700>true</span>;
-            rndChild.Animator.SetFloat(<span style=color:#c30>&#34;MotionSpeedFactor&#34;</span>, Animator.GetFloat(<span style=color:#c30>&#34;MotionSpeedFactor&#34;</span>));
-            rndChild.Animator.SetTrigger(<span style=color:#c30>&#34;FireNeuronDown&#34;</span>);
-        }
-    }
-
-    <span style=color:#069;font-weight:700>public</span> <span style=color:#069;font-weight:700>void</span> TriggerUp()
-    {
-        <span style=color:#069;font-weight:700>if</span> ((Parent != <span style=color:#069;font-weight:700>null</span>) &amp;&amp; (UnityEngine.Random.Range(<span style=color:#f60>0</span>, <span style=color:#f60>100</span>) &lt; NeuronNetworkController.Instance.TriggerChance)) 
-        {
-            Parent.Animator.enabled = <span style=color:#069;font-weight:700>true</span>;
-        }
-        Parent?.Animator.SetFloat(<span style=color:#c30>&#34;MotionSpeedFactor&#34;</span>, Animator.GetFloat(<span style=color:#c30>&#34;MotionSpeedFactor&#34;</span>));
-        Parent?.Animator.SetTrigger(<span style=color:#c30>&#34;FireNeuronUp&#34;</span>);
-    }
-}
-</code></pre></div><h4 id=unity>Unity</h4>
-<p>Here is a look at Unity side of the network generation and animation.</p>
-<p>On the interface of the neuron network controller script component, several parameters can be set: the maximum number of neurons, the probability for more than one child per neuron (which translates to the density of the network), the seed to create fixed random networks. Also, the component references the neuron prefabs that make up the network.</p>
-<p><img src=img/neuron-network-public-interface.png alt="Neuron network public interface"></p>
-<p>The most important part of individual neuron for the network generation is the script component which takes a list of Unity objects, namely the directions that the child neurons would be facing.</p>
-<p><img src=img/neuron-master-components.png alt="Neuron master components"></p>
-<p>The neuron shader graph not only handles the general textures of the neurons but also prepares for the traveling light shifting a gradient across the model via UV animation.</p>
-<p><img src=img/neuron-shader-graph.png alt="Neuron shader graph"></p>
-<p>Finally, the neuron animator starts and stops the &ldquo;firing&rdquo; animation in the appropriate direction.</p>
-<p><img src=img/neuron-animator.png alt="Neuron animator"></p>
-<div class=blog-tags>
-<a href=https://www.hrmn.dev/tags/unity/>unity</a>&nbsp;
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><header class=header-section><div class="intro-header no-img"><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=project-heading><h1>Microscopic Space</h1><hr class=small><h2 class=project-subheading>A procedural network for an award-winning VR experience</h2></div></div></div></div></div></header><div class=container role=main><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><article role=main class=blog-post><p><em>The task: fly through a vast network of neuron models and visualize the propagation of &ldquo;signals&rdquo; across the network. My solution: generate the network procedurally, and the rest will follow.</em></p><p>Let&rsquo;s begin with the result before looking behind the scenes.</p><video controls preload=auto width=100% autoplay loop playsinline class=html-video>
+<source src=/project/microscopic-space/img/mtb-network-flight.mp4 type=video/mp4><span>Your browser doesn't support embedded videos, but don't worry, you can <a href=/project/microscopic-space/img/mtb-network-flight.mp4>download it</a> and watch it with your favorite video player!</span></video><h3 id=challenge>Challenge</h3><p>The award-winning VR experience <em>Mind The Brain!</em> by <a href=https://www.myndstorm.me/>mYndstorm productions</a> is a dream-like, non-scientific journey through the brain. Some section of the experience are programmed to react to the neural activity of the viewer. This is done through a brain-computer-interface (BCI) that converts a live electro encephalogram into usable variables for the program code.</p><p>One key scene of the experience, called &ldquo;Microscopic Space&rdquo;, one I was asked to create, was a minute-long flight (11 minutes to be precise) through a network of neuron 3D models. Additionally the network had to be traversed by lights, visualizing the propagation of electric signals through the brain. The frequency and speed with which these lights travel across the network had to depend on the brain activity of the viewer.</p><p>A first attempt at hand crafting a network from my 5 base neuron 3D models in a 3D application first, and importing the whole network scene into Unity was not fruitful for two reasons:</p><ul><li>It was a cumbersome process to arrange the six neuron models in a connected way, too laborious for the intended duration of the scene.</li><li>It did was very polygon heavy, and with dozens and hundreds of individual neuron model copies applying different level-of-detail (LOD) versions would again be a lot of work.</li></ul><h3 id=approach>Approach</h3><p>It quickly became clear that generating the network procedurally by replicating instances of the base models instead of copying them was the way forward. This would save time and polygons (because LOD stand-ins had only be applied to the six base models before replication).</p><p>But that was still easier said (or thought) than done.</p><p>The six models were similar in that they each had several dendrites and one axon that would connect to the body of a neighbouring cell. But the axons were of different length, the dendrites in different directions, and every neuron had to be rotated in different angles to connect without (clearly visible) intersection of dendrites and axons.</p><h4 id=heureka>Heureka!</h4><p>The central idea that solved the problem was to <em>move the origin of a neuron from the center of its own cell body to beyond its axons where the parent neuron&rsquo;s cell body would be</em>. In the center of each the neuron would then be three null locators pointing in the direction where a child neuron could dock.</p><p>By parenting the children (with their offset origins) to the null locators (at the body centre) the child neurons would automatically &ldquo;grow away&rdquo; from the parent in allowed directions.</p><p>Which in the end looks like this:</p><video controls preload=auto width=100% autoplay loop playsinline class=html-video>
+<source src=/project/microscopic-space/img/mtb-build-network.mp4 type=video/mp4><span>Your browser doesn't support embedded videos, but don't worry, you can <a href=/project/microscopic-space/img/mtb-build-network.mp4>download it</a> and watch it with your favorite video player!</span></video><h3 id=c-and-unity-implementation>C# and Unity implementation</h3><p>Because we used Unity&rsquo;s own version control system I cannot easily share a link to GitHub repository. But following is an abridged version of the relevant C# code, along with a look at the central elements in Unity. I stripped the code of references to our proprietary camera control system, and of the BCI connection.</p><h4 id=helper-methods>Helper methods</h4><p>Nothing to write home about in these two helper functions that helped randomizing certain aspects of the network.</p><div class=highlight><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#069;font-weight:700>public</span> <span style=color:#069;font-weight:700>static</span> <span style=color:#069;font-weight:700>class</span> <span style=color:#0a8;font-weight:700>NeuronHelper</span>
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#09f;font-style:italic>// Returns a random element from a list.</span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>public</span> <span style=color:#069;font-weight:700>static</span> T GetRandomElement&lt;T&gt;(<span style=color:#069;font-weight:700>this</span> List&lt;T&gt; list)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#069;font-weight:700>return</span> list[Random.Range(<span style=color:#f60>0</span>, list.Count)];
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#09f;font-style:italic>// Returns a random variation of a base value. Variance in percent.</span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>public</span> <span style=color:#069;font-weight:700>static</span> <span style=color:#078;font-weight:700>float</span> GetRandomVariation(<span style=color:#078;font-weight:700>float</span> baseValue, <span style=color:#078;font-weight:700>int</span> variance)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#069;font-weight:700>return</span> baseValue + baseValue * Random.Range(-variance, variance) / <span style=color:#f60>100f</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=neuron-network-controller>Neuron network controller</h4><p>The neuron network controller class&mldr;</p><ul><li>provides an interface for the user to set parameters for the network generation through public variables,</li><li>orchestrates the generation of neurons by instantiating and parenting them properly,</li><li>initiates the &ldquo;firing&rdquo; animation on randomly chosen neurons across the network.</li></ul><div class=highlight><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#069;font-weight:700>public</span> <span style=color:#069;font-weight:700>class</span> <span style=color:#0a8;font-weight:700>NeuronNetworkController</span> : MonoBehaviour
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>internal</span> Transform NetworkTransform;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#09f;font-style:italic>// Chance for a neuron to fire randomly</span>
+</span></span><span style=display:flex><span><span style=color:#309>    [Range(0, 1000)]</span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>public</span> <span style=color:#078;font-weight:700>int</span> FireChance = <span style=color:#f60>10</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#09f;font-style:italic>// Chance for light to trigger next neuron to fire </span>
+</span></span><span style=display:flex><span><span style=color:#309>    [Range(0, 100)]</span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>public</span> <span style=color:#078;font-weight:700>int</span> TriggerChance = <span style=color:#f60>20</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#09f;font-style:italic>// Speed of movement of the lights across the network</span>
+</span></span><span style=display:flex><span><span style=color:#309>    [Range(0.25f, 1.5f)]</span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>public</span> <span style=color:#078;font-weight:700>float</span> LightSpeed = <span style=color:#f60>0.75f</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#09f;font-style:italic>// Variance in speed</span>
+</span></span><span style=display:flex><span><span style=color:#309>    [Range(0, 100)]</span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>public</span> <span style=color:#078;font-weight:700>int</span> LightSpeedVariance = <span style=color:#f60>50</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#09f;font-style:italic>// Number of neurons in the network</span>
+</span></span><span style=display:flex><span><span style=color:#309>    [Range(0, 5000)]</span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>public</span> <span style=color:#078;font-weight:700>int</span> MaxNeuronCount = <span style=color:#f60>2000</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#09f;font-style:italic>// Probability of a child neuron being generated for each potential direction</span>
+</span></span><span style=display:flex><span><span style=color:#309>    [Range(0, 100)]</span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>public</span> <span style=color:#078;font-weight:700>int</span> ChildSpawnProb = <span style=color:#f60>15</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>public</span> <span style=color:#078;font-weight:700>int</span> RandomSeed = <span style=color:#f60>1015</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#09f;font-style:italic>// List of neuron prefab models from which to build the network </span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>public</span> List&lt;GameObject&gt; NeuronPrefabs;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#09f;font-style:italic>// List of all generated neurons in the network</span>
+</span></span><span style=display:flex><span>    List&lt;Neuron&gt; Neurons = <span style=color:#069;font-weight:700>new</span> List&lt;Neuron&gt;();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>public</span> <span style=color:#078;font-weight:700>float</span> NeuronFireStartPosition = <span style=color:#f60>5f</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>public</span> <span style=color:#078;font-weight:700>int</span> NeuronCounter =&gt; Neurons.Count;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#09f;font-style:italic>// Create singleton of this class</span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>public</span> <span style=color:#069;font-weight:700>static</span> NeuronNetworkController Instance;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>public</span> <span style=color:#069;font-weight:700>void</span> Awake()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        Instance = <span style=color:#069;font-weight:700>this</span>;
+</span></span><span style=display:flex><span>        NetworkTransform = GetComponent&lt;Transform&gt;();
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>public</span> <span style=color:#069;font-weight:700>void</span> CreateNeuron(Transform newNeuronTransform, Neuron parent)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#069;font-weight:700>if</span> (NeuronCounter &gt; MaxNeuronCount)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#069;font-weight:700>return</span>;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#078;font-weight:700>var</span> nextChild = Instantiate(NeuronPrefabs.GetRandomElement(), 
+</span></span><span style=display:flex><span>                                    newNeuronTransform.position, 
+</span></span><span style=display:flex><span>                                    newNeuronTransform.rotation, 
+</span></span><span style=display:flex><span>                                    NetworkTransform
+</span></span><span style=display:flex><span>                                    ).GetComponent&lt;Neuron&gt;();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        nextChild.NeuronNumber = NeuronCounter;
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        Neurons.Add(nextChild);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        nextChild.Parent = parent;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        parent.Children.Add(nextChild);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>private</span> <span style=color:#069;font-weight:700>void</span> Update()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        FireNeurons();
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>public</span> <span style=color:#069;font-weight:700>void</span> FireNeurons()
+</span></span><span style=display:flex><span>    {      
+</span></span><span style=display:flex><span>        <span style=color:#069;font-weight:700>if</span> (UnityEngine.Random.Range(<span style=color:#f60>0</span>, <span style=color:#f60>100</span>) &lt; FireChance % <span style=color:#f60>100</span>)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            Neurons.GetRandomElement().Fire(NeuronHelper.GetRandomVariation(LightSpeed, LightSpeedVariance));
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#069;font-weight:700>for</span> (<span style=color:#078;font-weight:700>int</span> i = <span style=color:#f60>1</span>; i &lt; Math.Floor(FireChance / <span style=color:#f60>100f</span>); i++)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            Neurons.GetRandomElement().Fire(NeuronHelper.GetRandomVariation(LightSpeed, LightSpeedVariance));
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=single-neuron>Single neuron</h4><p>The neuron class&mldr;</p><ul><li>initiates the &ldquo;reproduction&rdquo; of child neurons on <code>Start()</code>,</li><li>generates between one and three children by calling <code>CreateNeuron</code> on the neuron network controller,</li><li>handles the &ldquo;firing&rdquo; animation,</li><li>triggers neurons up or down the tree to start their &ldquo;firing&rdquo; animation.</li></ul><div class=highlight><pre tabindex=0 style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#069;font-weight:700>public</span> <span style=color:#069;font-weight:700>class</span> <span style=color:#0a8;font-weight:700>Neuron</span> : MonoBehaviour
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#09f;font-style:italic>// New child child neurons can be placed at these coordinates with these orientations.</span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>public</span> List&lt;Transform&gt; Directions; 
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>public</span> <span style=color:#078;font-weight:700>int</span> NeuronNumber { <span style=color:#069;font-weight:700>get</span>; <span style=color:#069;font-weight:700>set</span>; }
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>internal</span> List&lt;Neuron&gt; Children = <span style=color:#069;font-weight:700>new</span> List&lt;Neuron&gt;();
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>internal</span> Neuron Parent;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#09f;font-style:italic>// Neuron firing is done via an animator</span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>internal</span> Animator Animator;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>private</span> <span style=color:#069;font-weight:700>void</span> Awake()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        Animator = GetComponent&lt;Animator&gt;();
+</span></span><span style=display:flex><span>        Animator.enabled = <span style=color:#069;font-weight:700>false</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>void</span> Start()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        GenerateChildren();
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>private</span> <span style=color:#069;font-weight:700>void</span> GenerateChildren()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        UnityEngine.Random.seed = NeuronNetworkController.Instance.RandomSeed + NeuronNumber;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#069;font-weight:700>foreach</span> (<span style=color:#078;font-weight:700>var</span> direction <span style=color:#069;font-weight:700>in</span> Directions)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#069;font-weight:700>if</span> (UnityEngine.Random.Range(<span style=color:#f60>0</span>, <span style=color:#f60>100</span>) &lt; NeuronNetworkController.Instance.ChildSpawnProb)
+</span></span><span style=display:flex><span>            {
+</span></span><span style=display:flex><span>                NeuronNetworkController.Instance.CreateNeuron(direction, <span style=color:#069;font-weight:700>this</span>);
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#069;font-weight:700>if</span> (Children.Count &lt; <span style=color:#f60>1</span>)
+</span></span><span style=display:flex><span>            NeuronNetworkController.Instance.CreateNeuron(Directions.GetRandomElement(), <span style=color:#069;font-weight:700>this</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>internal</span> <span style=color:#069;font-weight:700>void</span> Fire(<span style=color:#078;font-weight:700>float</span> speed)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        Animator.enabled = <span style=color:#069;font-weight:700>true</span>;
+</span></span><span style=display:flex><span>        Animator.SetFloat(<span style=color:#c30>&#34;MotionSpeedFactor&#34;</span>, speed);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#069;font-weight:700>if</span> (UnityEngine.Random.Range(<span style=color:#f60>0</span>, <span style=color:#f60>2</span>) == <span style=color:#f60>1</span>)
+</span></span><span style=display:flex><span>            Animator.SetTrigger(<span style=color:#c30>&#34;FireNeuronDown&#34;</span>);
+</span></span><span style=display:flex><span>        <span style=color:#069;font-weight:700>else</span>
+</span></span><span style=display:flex><span>            Animator.SetTrigger(<span style=color:#c30>&#34;FireNeuronDown&#34;</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>internal</span> <span style=color:#069;font-weight:700>void</span> TurnOffAnimator()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        Animator.enabled = <span style=color:#069;font-weight:700>false</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>public</span> <span style=color:#069;font-weight:700>void</span> TriggerDown()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#069;font-weight:700>if</span> ((Children.Count &gt; <span style=color:#f60>0</span>) &amp;&amp; (UnityEngine.Random.Range(<span style=color:#f60>0</span>, <span style=color:#f60>100</span>) &lt; NeuronNetworkController.Instance.TriggerChance))
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#078;font-weight:700>var</span> rndChild = Children.GetRandomElement();
+</span></span><span style=display:flex><span>            rndChild.Animator.enabled = <span style=color:#069;font-weight:700>true</span>;
+</span></span><span style=display:flex><span>            rndChild.Animator.SetFloat(<span style=color:#c30>&#34;MotionSpeedFactor&#34;</span>, Animator.GetFloat(<span style=color:#c30>&#34;MotionSpeedFactor&#34;</span>));
+</span></span><span style=display:flex><span>            rndChild.Animator.SetTrigger(<span style=color:#c30>&#34;FireNeuronDown&#34;</span>);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#069;font-weight:700>public</span> <span style=color:#069;font-weight:700>void</span> TriggerUp()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#069;font-weight:700>if</span> ((Parent != <span style=color:#069;font-weight:700>null</span>) &amp;&amp; (UnityEngine.Random.Range(<span style=color:#f60>0</span>, <span style=color:#f60>100</span>) &lt; NeuronNetworkController.Instance.TriggerChance)) 
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            Parent.Animator.enabled = <span style=color:#069;font-weight:700>true</span>;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        Parent?.Animator.SetFloat(<span style=color:#c30>&#34;MotionSpeedFactor&#34;</span>, Animator.GetFloat(<span style=color:#c30>&#34;MotionSpeedFactor&#34;</span>));
+</span></span><span style=display:flex><span>        Parent?.Animator.SetTrigger(<span style=color:#c30>&#34;FireNeuronUp&#34;</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=unity>Unity</h4><p>Here is a look at Unity side of the network generation and animation.</p><p>On the interface of the neuron network controller script component, several parameters can be set: the maximum number of neurons, the probability for more than one child per neuron (which translates to the density of the network), the seed to create fixed random networks. Also, the component references the neuron prefabs that make up the network.</p><p><img src=img/neuron-network-public-interface.png alt="Neuron network public interface"></p><p>The most important part of individual neuron for the network generation is the script component which takes a list of Unity objects, namely the directions that the child neurons would be facing.</p><p><img src=img/neuron-master-components.png alt="Neuron master components"></p><p>The neuron shader graph not only handles the general textures of the neurons but also prepares for the traveling light shifting a gradient across the model via UV animation.</p><p><img src=img/neuron-shader-graph.png alt="Neuron shader graph"></p><p>Finally, the neuron animator starts and stops the &ldquo;firing&rdquo; animation in the appropriate direction.</p><p><img src=img/neuron-animator.png alt="Neuron animator"></p><div class=blog-tags><a href=https://www.hrmn.dev/tags/unity/>unity</a>&nbsp;
 <a href=https://www.hrmn.dev/tags/c-sharp/>c-sharp</a>&nbsp;
 <a href=https://www.hrmn.dev/tags/procedural-network/>procedural network</a>&nbsp;
-<a href=https://www.hrmn.dev/tags/virtual-reality/>virtual reality</a>&nbsp;
-</div>
-<hr>
-<section id=social-share>
-<div class="list-inline footer-links">
-<div class=share-box aria-hidden=true>
-<ul class=share>
-<li>
-<a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fwww.hrmn.dev%2fproject%2fmicroscopic-space%2f&title=Microscopic%20Space" target=_blank title="Share on LinkedIn">
-<i class="fab fa-linkedin"></i>
-</a>
-</li>
-<li>
-<a href="//twitter.com/share?url=https%3a%2f%2fwww.hrmn.dev%2fproject%2fmicroscopic-space%2f&text=Microscopic%20Space&via=mrchrmn" target=_blank title="Share on Twitter">
-<i class="fab fa-twitter"></i>
-</a>
-</li>
-<li>
-<a href="//reddit.com/submit?url=https%3a%2f%2fwww.hrmn.dev%2fproject%2fmicroscopic-space%2f&title=Microscopic%20Space" target=_blank title="Share on Reddit">
-<i class="fab fa-reddit"></i>
-</a>
-</li>
-</div>
-</div>
-</section>
-</article>
-<ul class="pager blog-pager">
-<li class=previous>
-<a href=https://www.hrmn.dev/project/thrsqr/ data-toggle=tooltip data-placement=top title=ThrSqr>&larr; Previous Post</a>
-</li>
-<li class=next>
-<a href=https://www.hrmn.dev/project/alexandria/ data-toggle=tooltip data-placement=top title=Alexandria>Next Post &rarr;</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<footer>
-<div class=container>
-<div class=row>
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<ul class="list-inline text-center footer-links">
-<li>
-<a href=mailto:marc@hrmn.dev title="Email me">
-<span class="fa-stack fa-lg">
-<i class="fas fa-circle fa-stack-2x"></i>
-<i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-</li>
-<li>
-<a href=https://github.com/mrchrmn title=GitHub>
-<span class="fa-stack fa-lg">
-<i class="fas fa-circle fa-stack-2x"></i>
-<i class="fab fa-github fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-</li>
-<li>
-<a href=https://twitter.com/mrchrmn title=Twitter>
-<span class="fa-stack fa-lg">
-<i class="fas fa-circle fa-stack-2x"></i>
-<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-</li>
-<li>
-<a href=https://linkedin.com/in/marchermann title=LinkedIn>
-<span class="fa-stack fa-lg">
-<i class="fas fa-circle fa-stack-2x"></i>
-<i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-</span>
-</a>
-</li>
-</ul>
-<p class="credits copyright text-muted">
-Marc Hermann
+<a href=https://www.hrmn.dev/tags/virtual-reality/>virtual reality</a>&nbsp;</div><hr><section id=social-share><div class="list-inline footer-links"><div class=share-box aria-hidden=true><ul class=share><li><a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fwww.hrmn.dev%2fproject%2fmicroscopic-space%2f&title=Microscopic%20Space" target=_blank title="Share on LinkedIn"><i class="fab fa-linkedin"></i></a></li><li><a href="//twitter.com/share?url=https%3a%2f%2fwww.hrmn.dev%2fproject%2fmicroscopic-space%2f&text=Microscopic%20Space&via=mrchrmn" target=_blank title="Share on Twitter"><i class="fab fa-twitter"></i></a></li><li><a href="//reddit.com/submit?url=https%3a%2f%2fwww.hrmn.dev%2fproject%2fmicroscopic-space%2f&title=Microscopic%20Space" target=_blank title="Share on Reddit"><i class="fab fa-reddit"></i></a></li></div></div></section></article><ul class="pager blog-pager"><li class=previous><a href=https://www.hrmn.dev/project/thrsqr/ data-toggle=tooltip data-placement=top title=ThrSqr>&larr; Previous Post</a></li><li class=next><a href=https://www.hrmn.dev/project/alexandria/ data-toggle=tooltip data-placement=top title=Alexandria>Next Post &rarr;</a></li></ul></div></div></div><footer><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center footer-links"><li><a href=mailto:marc@hrmn.dev title="Email me"><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-envelope fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://github.com/mrchrmn title=GitHub><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-github fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://twitter.com/mrchrmn title=Twitter><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://linkedin.com/in/marchermann title=LinkedIn><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-linkedin fa-stack-1x fa-inverse"></i></span></a></li></ul><p class="credits copyright text-muted">Marc Hermann
 &nbsp;&bull;&nbsp;
-<a href=https://www.hrmn.dev>i ❤️ logic — hrmn.dev</a>
-</p>
-<p class="credits theme-by text-muted">
-<a href=https://gohugo.io>Hugo v0.92.1</a> powered &nbsp;&bull;&nbsp; Theme <a href=https://github.com/halogenica/beautifulhugo>Beautiful Hugo</a> adapted from <a href=https://deanattali.com/beautiful-jekyll/>Beautiful Jekyll</a>
-</p>
-</div>
-</div>
-</div>
-</footer><script src=https://www.hrmn.dev/js/katex.min.js></script>
+<a href=https://www.hrmn.dev>i ❤️ logic — hrmn.dev</a></p><p class="credits theme-by text-muted"><a href=https://gohugo.io>Hugo v0.96.0</a> powered &nbsp;&bull;&nbsp; Theme <a href=https://github.com/halogenica/beautifulhugo>Beautiful Hugo</a> adapted from <a href=https://deanattali.com/beautiful-jekyll/>Beautiful Jekyll</a></p></div></div></div></footer><script src=https://www.hrmn.dev/js/katex.min.js></script>
 <script src=https://www.hrmn.dev/js/auto-render.min.js></script>
 <script src=https://www.hrmn.dev/js/jquery.min.js></script>
 <script src=https://www.hrmn.dev/js/bootstrap.min.js></script>
 <script src=https://www.hrmn.dev/js/main.js></script><script>renderMathInElement(document.body)</script><script src=https://www.hrmn.dev/js/photoswipe.min.js></script>
-<script src=https://www.hrmn.dev/js/photoswipe-ui-default.min.js></script><script src=https://www.hrmn.dev/js/load-photoswipe.js></script>
-</body>
-</html>
+<script src=https://www.hrmn.dev/js/photoswipe-ui-default.min.js></script><script src=https://www.hrmn.dev/js/load-photoswipe.js></script></body></html>
